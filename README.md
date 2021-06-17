@@ -1,1 +1,1 @@
-this ap is about sharing Goods.
+this app is about sharing Goods.
