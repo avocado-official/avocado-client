@@ -17,5 +17,6 @@ a {
 
 * {
   box-sizing: border-box;
+  direction: rtl;
   font-family: vazir;
 }

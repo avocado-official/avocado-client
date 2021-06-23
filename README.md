@@ -1,1 +1,4 @@
-this app is about sharing Goods.
+# Goods
+
+This app is about sharing and donating food.
+
