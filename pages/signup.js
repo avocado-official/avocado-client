@@ -4,6 +4,7 @@ import Input from '../components/Input'
 import Select from '../components/Select'
 import styles from '../styles/signup.module.css'
 import { Row, Col } from 'antd'
+import Error from '../components/Error'
 
 export default function signup() {
   const {
@@ -23,11 +24,14 @@ export default function signup() {
           {...register('name', { required: true, maxLength: 20 })}
           placeholder='نام'
         />
-        {errors.name?.type === 'required' && 'نام الزامی است.'}
-        {errors.name?.type === 'maxLength' &&
-          'تعداد حروف بیشتر از حد تعریف شده است.'}
-
-        {/* <label className={styles.label}>تلفن همراه</label> */}
+        {
+          errors.name?.type === 'required' &&
+          <Error field="نام" type="required" />
+        }
+        {
+          errors.name?.type === 'maxLength' &&
+          <Error field="نام" type="maxLenght" />
+        }
         <input
           className={styles.input}
           type='tel'
@@ -38,13 +42,19 @@ export default function signup() {
           })}
           placeholder='تلفن همراه'
         />
-        {errors.phone?.type === 'required' && 'شماره همراه الزامی است.'}
-        {errors.phone?.type === 'maxLength' &&
-          'تعداد حروف بیشتر از حد مجاز است.'}
-        {errors.phone?.type === 'minLength' &&
-          'تعداد حروف کمتر از حد مجاز است.'}
-
-        {/* <label className={styles.label}>رمز عبور</label> */}
+        {
+          errors.phone?.type === 'required' &&
+          <Error field="تلفن همراه" type="required" />
+        }
+        {
+          errors.phone?.type === 'maxLength' &&
+          <Error field="تلفن همراه" type="maxLenght" />
+        }
+        {
+          errors.phone?.type === 'maxLength' &&
+          <Error field="تلفن همراه" type="minLength" />
+        }
+        
         <input
           className={styles.input}
           {...register('password', {
