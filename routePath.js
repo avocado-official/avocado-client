@@ -1,0 +1,7 @@
+export const home = '/'
+export const map = '/map'
+export const goals = '/goals'
+export const forum = '/forum'
+export const massages = '/massages'
+export const signup = '/signup'
+export const login = '/login'

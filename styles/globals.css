@@ -5,6 +5,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+@font-face {
+  font-family: vazir;
+  src: url('../font/Vazir.ttf');
+}
 
 a {
   color: inherit;
@@ -14,4 +18,5 @@ a {
 * {
   box-sizing: border-box;
   direction: rtl;
+  font-family: vazir;
 }
