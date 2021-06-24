@@ -6,8 +6,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 @font-face {
-  font-family: vazir;
-  src: url('../font/Vazir.ttf');
+  font-family: shabnam;
+  src: url('../font/Shabnam-Light.ttf');
 }
 
 a {
@@ -18,5 +18,5 @@ a {
 * {
   box-sizing: border-box;
   direction: rtl;
-  font-family: vazir;
+  font-family: shabnam;
 }
