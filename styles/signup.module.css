@@ -1,26 +1,29 @@
 .form {
-  top: 35%;
-  left: 50%;
-  width: 100%;
-  height: auto;
-  direction: rtl;
-  position: absolute;
-  text-align: center;
-  transform: translate(-50%, -50%);
+  /* top: 35%; */
+  /* left: 50%; */
+  /* width: 100%; */
+  /* height: auto; */
+  /* direction: rtl; */
+  /* position: absolute; */
+  /* text-align: center; */
+  margin-top: 50px;
+  /* transform: translate(-50%, -50%); */
 }
 .input {
   width: 80%;
-  margin: 6px;
+  margin-bottom: 6px;
   outline: none;
-  padding: 1.5%;
+  /* padding: 1.5%; */
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px rgba(104, 104, 104, 0.671) solid;
 }
+
 .input:focus {
   background-color: rgba(240, 240, 240, 0.425);
 }
+
 .select {
   width: 80%;
   margin: 6px;
