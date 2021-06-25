@@ -24,14 +24,12 @@ export default function signup() {
           {...register('name', { required: true, maxLength: 20 })}
           placeholder='نام'
         />
-        {
-          errors.name?.type === 'required' &&
-          <Error field="نام" type="required" />
-        }
-        {
-          errors.name?.type === 'maxLength' &&
-          <Error field="نام" type="maxLenght" />
-        }
+        {errors.name?.type === 'required' && (
+          <Error field='نام' type='required' />
+        )}
+        {errors.name?.type === 'maxLength' && (
+          <Error field='نام' type='maxLenght' />
+        )}
         <input
           className={styles.input}
           type='tel'
@@ -42,19 +40,16 @@ export default function signup() {
           })}
           placeholder='تلفن همراه'
         />
-        {
-          errors.phone?.type === 'required' &&
-          <Error field="تلفن همراه" type="required" />
-        }
-        {
-          errors.phone?.type === 'maxLength' &&
-          <Error field="تلفن همراه" type="maxLenght" />
-        }
-        {
-          errors.phone?.type === 'maxLength' &&
-          <Error field="تلفن همراه" type="minLength" />
-        }
-        
+        {errors.phone?.type === 'required' && (
+          <Error field='تلفن همراه' type='required' />
+        )}
+        {errors.phone?.type === 'maxLength' && (
+          <Error field='تلفن همراه' type='maxLenght' />
+        )}
+        {errors.phone?.type === 'maxLength' && (
+          <Error field='تلفن همراه' type='minLength' />
+        )}
+
         <input
           className={styles.input}
           {...register('password', {
