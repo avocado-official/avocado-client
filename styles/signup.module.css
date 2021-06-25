@@ -1,49 +1,63 @@
 .form {
-  top: 35%;
-  left: 50%;
-  width: 100%;
-  height: auto;
-  direction: rtl;
-  position: absolute;
-  text-align: center;
-  transform: translate(-50%, -50%);
+  margin-top: 25%;
 }
 .input {
-  width: 80%;
-  padding: 1.5%;
-  margin: 6px;
+  width: 100%;
   outline: none;
   border-top: none;
   border-left: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
   border-right: none;
-  border-bottom: 1px rgba(104, 104, 104, 0.671) solid;
+  border-bottom: 1px rgb(195, 195, 195) solid;
 }
+
 .input:focus {
-  background-color: rgba(240, 240, 240, 0.425);
+  background-color: #dddddd65;
 }
-.select {
-  width: 80%;
-  margin: 6px;
-  padding: 1.5%;
-  color: gray;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background-color: white;
-  border-bottom: 1px rgba(104, 104, 104, 0.671) solid;
-}
-.option {
-  background-color: white;
-}
+
 .button {
-  width: 80%;
+  width: 100%;
   height: 34px;
+  color: white;
   margin-top: 25px;
   border-radius: 8px;
   border: #ffab73 solid;
   background-color: #ffab73;
 }
 .button:hover {
-  border: #fb9c5d solid;
-  background-color: #fb9c5d;
+  border: #ff954f solid;
+  background-color: #ff954f;
+}
+.loginLink {
+  height: 34px;
+  width: 100%;
+  margin-top: 13px;
+  text-align: center;
+}
+.aLink {
+  font-size: 16px;
+  color: #ffab73;
+}
+.aLink:hover {
+  color: #ff8738;
+}
+.terms {
+  margin-top: 8px;
+  margin-right: 5px;
+  color: gray;
+}
+.problem {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.problemLink {
+  color: #ffab73;
+}
+.problemLink:hover {
+  color: #ff9046;
 }
