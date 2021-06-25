@@ -1,8 +1,8 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import styles from '../styles/signup.module.css'
+import styles from '../../styles/signup.module.css'
 import { Row, Col } from 'antd'
-import Error from '../components/Error'
+import Error from '../../components/Error'
 import Link from 'next/link'
 
 export default function signup() {
@@ -20,7 +20,7 @@ export default function signup() {
         <form
           onSubmit={handleSubmit(onSubmit)}
           className={styles.form}
-          autocomplete='off'
+          autoComplete='off'
         >
           <input
             className={styles.input}
