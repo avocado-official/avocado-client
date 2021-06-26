@@ -25,7 +25,6 @@ export default function Signup() {
             autoComplete="off"
           >
             <Input
-              className={styles.input}
               {...register('name', { required: true, maxLength: 20 })}
               placeholder="نام"
             />
@@ -33,7 +32,6 @@ export default function Signup() {
             {errors.name?.type === 'maxLength' && <Error field="نام" type="maxLenght" />}
 
             <Input
-              className={styles.input}
               type="tel"
               {...register('phone', {
                 required: true,
@@ -53,7 +51,6 @@ export default function Signup() {
             )}
 
             <Input
-              className={styles.input}
               {...register('password', {
                 required: true,
                 maxLength: 18,
