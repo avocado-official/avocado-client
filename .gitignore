@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# PWA CONFIGS
+/pwa-config
+
 # testing
 /coverage
 

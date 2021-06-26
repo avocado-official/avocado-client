@@ -7,6 +7,7 @@
   margin-bottom: 10px;
   border-right: none;
   border-bottom: 1px rgb(195, 195, 195) solid;
+  text-align: right;
 }
 
 .input:focus {

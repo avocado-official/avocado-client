@@ -1,12 +1,5 @@
-import React from 'react'
-import { Row, Col } from 'antd'
+import React from 'react';
 
 export default function Login() {
-  return (
-    <Row>
-      <Col span={6} offset={6}>
-        <p>ورود</p>
-      </Col>
-    </Row>
-  )
+  return <p>ورود</p>;
 }
