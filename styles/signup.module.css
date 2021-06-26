@@ -1,22 +1,5 @@
 .form {
   margin-top: 25%;
-<<<<<<< HEAD
-=======
-}
-.input {
-  width: 100%;
-  outline: none;
-  border-top: none;
-  border-left: none;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-right: none;
-  border-bottom: 1px rgb(195, 195, 195) solid;
-}
-
-.input:focus {
-  background-color: #dddddd65;
->>>>>>> dc0e8171e1876dfbc37773978e2f0f4eaf1d519c
 }
 
 .button {

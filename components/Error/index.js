@@ -13,6 +13,9 @@ export default function Error({ field, type }) {
     case 'minLength':
       message = 'کمتر از حد مجاز است.'
       break
+    case 'city':
+      message = 'لطفا شهر محل سکونت خود را انتخاب کنید.'
+      break
     default:
       message = 'معتبر نیست.'
   }

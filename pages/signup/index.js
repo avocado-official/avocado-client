@@ -1,10 +1,11 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React, { useState } from 'react'
+import { useForm, Controller } from 'react-hook-form'
 import styles from '../../styles/signup.module.css'
 import { Row, Col } from 'antd'
 import Error from '../../components/Error'
 import Link from 'next/link'
 import Input from '../../components/Input/index'
+import Select from 'react-select'
 
 export default function signup() {
   const {
@@ -12,8 +13,38 @@ export default function signup() {
     handleSubmit,
     formState: { errors },
   } = useForm()
+  const options = [
+    {
+      value: 'qom',
+      label: <div>Qom</div>,
+    },
+  ]
+  const handleChooseCity = (e) => {
+    setFormData({ ...formData, city: e.value, cityError: false })
+  }
 
-  const onSubmit = (data) => console.log(data)
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    password: '',
+    city: '',
+    cityError: false,
+  })
+
+  const onSubmit = (data) => {
+    if (formData.city === '') {
+      setFormData({ ...formData, cityError: true })
+    } else {
+      setFormData({
+        ...formData,
+        name: data.name,
+        phone: data.phone,
+        password: data.password,
+        cityError: false,
+      })
+      console.log(formData)
+    }
+  }
 
   return (
     <Row>
@@ -74,7 +105,13 @@ export default function signup() {
           {errors.password?.type === 'minLength' && (
             <Error field='رمز عبور' type='minLength' />
           )}
+          <Select
+            placeholder={'انتخاب شهر'}
+            options={options}
+            onChange={handleChooseCity}
+          />
 
+          {formData.cityError ? <Error type='city' /> : <div></div>}
           <Input className={styles.button} type='submit' value='ثبت نام' />
           <div className={styles.loginLink}>
             <Link href='/login'>
