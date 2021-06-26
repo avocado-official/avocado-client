@@ -4,6 +4,7 @@ import styles from '../../styles/signup.module.css'
 import { Row, Col } from 'antd'
 import Error from '../../components/Error'
 import Link from 'next/link'
+import Input from '../../components/Input/index'
 
 export default function signup() {
   const {
@@ -22,7 +23,7 @@ export default function signup() {
           className={styles.form}
           autoComplete='off'
         >
-          <input
+          <Input
             className={styles.input}
             {...register('name', { required: true, maxLength: 20 })}
             placeholder='نام'
@@ -34,7 +35,7 @@ export default function signup() {
             <Error field='نام' type='maxLenght' />
           )}
 
-          <input
+          <Input
             className={styles.input}
             type='tel'
             {...register('phone', {
@@ -55,7 +56,7 @@ export default function signup() {
             <Error field='تلفن همراه' type='pattern' />
           )}
 
-          <input
+          <Input
             className={styles.input}
             {...register('password', {
               required: true,
@@ -74,7 +75,7 @@ export default function signup() {
             <Error field='رمز عبور' type='minLength' />
           )}
 
-          <input className={styles.button} type='submit' value='ثبت نام' />
+          <Input className={styles.button} type='submit' value='ثبت نام' />
           <div className={styles.loginLink}>
             <Link href='/login'>
               <a className={styles.aLink}>ورود</a>

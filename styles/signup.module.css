@@ -1,20 +1,6 @@
 .form {
   margin-top: 25%;
 }
-.input {
-  width: 100%;
-  outline: none;
-  border-top: none;
-  border-left: none;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-right: none;
-  border-bottom: 1px rgb(195, 195, 195) solid;
-}
-
-.input:focus {
-  background-color: #dddddd65;
-}
 
 .button {
   width: 100%;
