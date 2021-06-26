@@ -16,7 +16,7 @@ export default function signup() {
   const options = [
     {
       value: 'qom',
-      label: <div>Qom</div>,
+      label: <div>قم</div>,
     },
   ]
   const handleChooseCity = (e) => {
@@ -55,7 +55,6 @@ export default function signup() {
           autoComplete='off'
         >
           <Input
-            className={styles.input}
             {...register('name', { required: true, maxLength: 20 })}
             placeholder='نام'
           />
@@ -67,7 +66,6 @@ export default function signup() {
           )}
 
           <Input
-            className={styles.input}
             type='tel'
             {...register('phone', {
               required: true,
@@ -88,7 +86,6 @@ export default function signup() {
           )}
 
           <Input
-            className={styles.input}
             {...register('password', {
               required: true,
               maxLength: 18,
