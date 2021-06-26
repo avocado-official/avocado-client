@@ -1,7 +1,8 @@
-const Input = ({ label, register, ...validation }) => (
+import styles from '../../styles/inputComponent.module.css'
+
+const Input = ({ className, ...props }) => (
   <>
-    <label>{label}</label>
-    <input {...register(label, validation)} />
+    <input className={className || styles.input} {...props} />
   </>
 )
 
