@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+=======
+import React, { useState } from 'react'
+import { useForm, Controller } from 'react-hook-form'
+import styles from '../../styles/signup.module.css'
+import { Row, Col } from 'antd'
+import Error from '../../components/Error'
+import Link from 'next/link'
+import Input from '../../components/Input/index'
+import Select from 'react-select'
+>>>>>>> a86b116ac58b12a49d2f52c37a69418fb80b0818
 
 import Error from '../../components/Error';
 import Input from '../../components/Input/index';
