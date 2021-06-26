@@ -4,10 +4,7 @@ import styles from '../../styles/signup.module.css'
 import { Row, Col } from 'antd'
 import Error from '../../components/Error'
 import Link from 'next/link'
-<<<<<<< HEAD
 import Input from '../../components/Input/index'
-=======
->>>>>>> dc0e8171e1876dfbc37773978e2f0f4eaf1d519c
 
 export default function signup() {
   const {
@@ -26,11 +23,7 @@ export default function signup() {
           className={styles.form}
           autoComplete='off'
         >
-<<<<<<< HEAD
           <Input
-=======
-          <input
->>>>>>> dc0e8171e1876dfbc37773978e2f0f4eaf1d519c
             className={styles.input}
             {...register('name', { required: true, maxLength: 20 })}
             placeholder='نام'
@@ -42,11 +35,7 @@ export default function signup() {
             <Error field='نام' type='maxLenght' />
           )}
 
-<<<<<<< HEAD
           <Input
-=======
-          <input
->>>>>>> dc0e8171e1876dfbc37773978e2f0f4eaf1d519c
             className={styles.input}
             type='tel'
             {...register('phone', {
@@ -67,11 +56,7 @@ export default function signup() {
             <Error field='تلفن همراه' type='pattern' />
           )}
 
-<<<<<<< HEAD
           <Input
-=======
-          <input
->>>>>>> dc0e8171e1876dfbc37773978e2f0f4eaf1d519c
             className={styles.input}
             {...register('password', {
               required: true,
@@ -90,11 +75,7 @@ export default function signup() {
             <Error field='رمز عبور' type='minLength' />
           )}
 
-<<<<<<< HEAD
           <Input className={styles.button} type='submit' value='ثبت نام' />
-=======
-          <input className={styles.button} type='submit' value='ثبت نام' />
->>>>>>> dc0e8171e1876dfbc37773978e2f0f4eaf1d519c
           <div className={styles.loginLink}>
             <Link href='/login'>
               <a className={styles.aLink}>ورود</a>
