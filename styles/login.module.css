@@ -1,0 +1,51 @@
+.form {
+  margin-top: 25%;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  color: white;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: #ffab73 solid;
+  background-color: #ffab73;
+  font-size: 20px;
+}
+.button:hover {
+  border: #ff954f solid;
+  background-color: #ff954f;
+}
+.divLink {
+  height: 50px;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.aLink {
+  font-size: 16px;
+  color: #ffab73;
+  font-size: 20px;
+}
+.aLink:hover {
+  color: #ff8738;
+}
+
+.problem {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.problemLink {
+  color: #ffab73;
+}
+.problemLink:hover {
+  color: #ff9046;
+}
