@@ -5,15 +5,18 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .headerTitle {
   font-weight: bold;
   margin-right: 10px;
 }
+
 .headerInfoDiv {
   display: flex;
   flex-direction: row;
   font-size: 25px;
 }
+
 .infoItem {
   margin-left: 10px;
   cursor: pointer;

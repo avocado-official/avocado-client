@@ -4,19 +4,19 @@
   border-top: none;
   height: 50px;
   border-left: none;
-
   border-right: none;
   border-bottom: 2px rgb(195, 195, 195) solid;
   text-align: right;
+
+  &:focus {
+    background-color: #dddddd65;
+  }
+
+  &:focus ~ .activeBorder {
+    width: 100%;
+  }
 }
 
-.input:focus {
-  background-color: #dddddd65;
-}
-
-.input:focus ~ .activeBorder {
-  width: 100%;
-}
 .activeBorder {
   transition: 0.5s;
   background-color: #ffab73;

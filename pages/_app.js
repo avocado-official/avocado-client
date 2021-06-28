@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import '../styles/globals.css';
+import '../styles/globals.scss';
 import 'bootstrap/dist/css/bootstrap.rtl.css';
 
 import { useStore } from '../store';

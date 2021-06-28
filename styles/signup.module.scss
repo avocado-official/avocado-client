@@ -1,3 +1,5 @@
+@use 'colors';
+
 .form {
   margin-top: 25%;
 }
@@ -8,15 +10,18 @@
   color: white;
   margin-top: 15px;
   border-radius: 8px;
-  border: #ffab73 solid;
-  background-color: #ffab73;
+  // border: #ffab73 solid;
+  border: colors.$color-4 solid;
+  background-color: colors.$color-4;
   font-size: 20px;
+
+  &:hover {
+    border: desaturate(colors.$color-4, 50%) solid;
+    background-color: opacify(colors.$color-4, 0.5);
+  }
 }
-.button:hover {
-  border: #ff954f solid;
-  background-color: #ff954f;
-}
-.divLink {
+
+.loginLink {
   height: 50px;
   width: 100%;
   margin-top: 15px;
@@ -30,9 +35,16 @@
   font-size: 16px;
   color: #ffab73;
   font-size: 20px;
+
+  &:hover {
+    color: #ff8738;
+  }
 }
-.aLink:hover {
-  color: #ff8738;
+
+.terms {
+  margin-top: 8px;
+  margin-right: 5px;
+  color: gray;
 }
 
 .problem {
@@ -43,9 +55,11 @@
   text-align: center;
   margin-bottom: 8px;
 }
+
 .problemLink {
   color: #ffab73;
-}
-.problemLink:hover {
-  color: #ff9046;
+
+  &:hover {
+    color: #ff9046;
+  }
 }
