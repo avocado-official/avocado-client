@@ -1,27 +1,36 @@
 import { useMemo } from 'react'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
 let store
 
 const initialState = {
   user: {},
   goods: [],
+  number: 0,
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'add': {
-      return state
+      let newState = { ...state, number: state.number + 1 }
+      return newState
     }
     default:
       return state
   }
 }
-
+const persistConfig = {
+  key: 'primary',
+  storage,
+  whitelist: ['number'], // place to select which state you want to persist
+}
+const persistedReducer = persistReducer(persistConfig, reducer)
 function initStore(preloadedState = initialState) {
   return createStore(
-    reducer,
+    persistedReducer,
     preloadedState,
     composeWithDevTools(applyMiddleware())
   )
@@ -32,6 +41,7 @@ export const initializeStore = (preloadedState) => {
 
   // After navigating to a page with an initial Redux state, merge that state
   // with the current state in the store, and create a new store
+
   if (preloadedState && store) {
     _store = initStore({
       ...store.getState(),

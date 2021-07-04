@@ -1,4 +1,4 @@
-import styles from '../../styles/footer.module.css'
+import styles from '../../styles/footer.module.scss'
 import { TiHomeOutline } from 'react-icons/ti'
 import { FaMapMarkerAlt, FaIdCardAlt } from 'react-icons/fa'
 import { MdForum } from 'react-icons/md'

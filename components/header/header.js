@@ -1,7 +1,7 @@
 import { BiSearch } from 'react-icons/bi'
 import { AiOutlineQuestionCircle, AiOutlineMenu } from 'react-icons/ai'
 
-import styles from '../../styles/header.module.css'
+import styles from '../../styles/header.module.scss'
 
 function Header({ title }) {
   return (

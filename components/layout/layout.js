@@ -1,6 +1,6 @@
 import Footer from '../footer/footer'
 import Header from '../header/header'
-import styles from '../../styles/layout.module.css'
+import styles from '../../styles/layout.module.scss'
 
 function Layout({ children, headerTitle }) {
   return (
