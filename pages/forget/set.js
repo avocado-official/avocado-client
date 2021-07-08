@@ -32,6 +32,7 @@ export default function ForgetPassword() {
               <p className={forgetStyles.title}>انتخاب رمز جدید</p>
             </div>
             <Input
+              type='password'
               {...register('password', {
                 required: true,
                 maxLength: 18,

@@ -44,6 +44,7 @@ export default function Signup() {
             )}
 
             <Input
+              type='password'
               {...register('password', {
                 required: true,
                 maxLength: 18,
