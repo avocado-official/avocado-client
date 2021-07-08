@@ -16,8 +16,8 @@
   font-size: 20px;
 
   &:hover {
-    border: desaturate(colors.$color-4, 50%) solid;
-    background-color: opacify(colors.$color-4, 0.5);
+    background-color: colors.$color-3;
+    border: colors.$color-3 solid;
   }
 }
 
@@ -33,11 +33,11 @@
 
 .aLink {
   font-size: 16px;
-  color: #ffab73;
+  color: colors.$color-4;
   font-size: 20px;
 
   &:hover {
-    color: #ff8738;
+    color: colors.$color-3;
   }
 }
 
@@ -57,9 +57,9 @@
 }
 
 .problemLink {
-  color: #ffab73;
+  color: colors.$color-3;
 
   &:hover {
-    color: #ff9046;
+    color: colors.$color-2;
   }
 }

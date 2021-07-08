@@ -1,18 +1,23 @@
 import React from 'react'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import Error from '../../components/Error'
 import Input from '../../components/Input/index'
 import styles from '../../styles/signup.module.scss'
+import forgetStyles from '../../styles/forget-password.module.scss'
 
-export default function Signup() {
+export default function ForgetPassword() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const router = useRouter()
+  const onSubmit = (data) => {
+    console.log(data)
+    router.push('/forget/code')
+  }
 
   return (
     <div className='container'>
@@ -23,6 +28,9 @@ export default function Signup() {
             className={styles.form}
             autoComplete='off'
           >
+            <div>
+              <p className={forgetStyles.title}>رمزتو فراموش کردی؟</p>
+            </div>
             <Input
               type='tel'
               {...register('phone', {
@@ -42,39 +50,7 @@ export default function Signup() {
             {errors.phone?.type === 'maxLength' && (
               <Error field='تلفن همراه' type='pattern' />
             )}
-
-            <Input
-              {...register('password', {
-                required: true,
-                maxLength: 18,
-                minLength: 7,
-              })}
-              placeholder='رمز عبور'
-            />
-            {errors.password?.type === 'required' && (
-              <Error field='رمز عبور' type='required' />
-            )}
-            {errors.password?.type === 'maxLength' && (
-              <Error field='رمز عبور' type='maxLength' />
-            )}
-            {errors.password?.type === 'minLength' && (
-              <Error field='رمز عبور' type='minLength' />
-            )}
-            <Link href='/forget'>
-              <a className={styles.problemLink}>فراموشی رمز؟</a>
-            </Link>
-
-            <Input className={styles.button} type='submit' value='ورود ' />
-            <div className={styles.loginLink}>
-              <Link href='/signup'>
-                <a className={styles.aLink}>ثبت نام</a>
-              </Link>
-            </div>
-            <div className={styles.problem}>
-              <Link href='/contact-us'>
-                <a className={styles.problemLink}>گزارش مشکل</a>
-              </Link>
-            </div>
+            <Input className={styles.button} type='submit' value='ارسال کد' />
           </form>
         </div>
       </div>

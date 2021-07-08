@@ -1,3 +1,5 @@
+@use 'colors';
+
 .input {
   width: 100%;
   outline: none;
@@ -19,7 +21,7 @@
 
 .activeBorder {
   transition: 0.5s;
-  background-color: #ffab73;
+  background-color: colors.$color-4;
   width: 0;
   position: absolute;
   height: 2px;
