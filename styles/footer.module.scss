@@ -1,4 +1,5 @@
 @use 'colors';
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -6,39 +7,29 @@
   justify-content: center;
 }
 
-.footerActiveItem {
-  width: 20%;
-  height: 50px;
+.item {
+  // width: 20%;
+  // height: 50px;
   display: flex;
   cursor: pointer;
   font-size: 35px;
   align-items: center;
   text-decoration: none;
   flex-direction: column;
-  color: colors.$color-4;
-  justify-content: center;
-}
-.footerActiveItem:hover {
-  color: colors.$color-3;
-}
-
-.footerPassiveItem {
-  height: 50px;
-  width: 20%;
-  color: #bb4291;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
   color: black;
-  text-decoration: none;
+  justify-content: center;
+  transition: color 500ms;
+  padding: 0 15px;
+
+  &:hover {
+    color: colors.$color-2;
+  }
 }
-.footerPassiveItem:hover {
+
+.activeItem {
   color: colors.$color-4;
 }
 
-.footerIcons {
-  font-size: 35px;
-}
+// .footerIcons {
+//   font-size: 35px;
+// }
