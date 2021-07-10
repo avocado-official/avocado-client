@@ -1,22 +1,25 @@
+@use 'colors';
 .footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .footerActiveItem {
-  height: 50px;
   width: 20%;
-  color: #bb4291;
+  height: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 35px;
+  align-items: center;
   text-decoration: none;
+  flex-direction: column;
+  color: colors.$color-4;
+  justify-content: center;
 }
 .footerActiveItem:hover {
+  color: colors.$color-3;
 }
 
 .footerPassiveItem {
@@ -33,6 +36,7 @@
   text-decoration: none;
 }
 .footerPassiveItem:hover {
+  color: colors.$color-4;
 }
 
 .footerIcons {
