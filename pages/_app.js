@@ -5,6 +5,7 @@ import '../styles/globals.scss'
 import 'bootstrap/dist/css/bootstrap.rtl.css'
 import { useStore } from '../store'
 import { Provider } from 'react-redux'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 function MyApp({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState)
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps }) {
           sizes='32x32'
         />
         <link rel='apple-touch-icon' href='/apple-icon.png'></link>
+
         <meta name='theme-color' content='#317EFB' />
       </Head>
 

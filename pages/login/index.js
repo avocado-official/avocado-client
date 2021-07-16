@@ -5,7 +5,7 @@ import Error from '../../components/Error'
 import Input from '../../components/Input/index'
 import styles from '../../styles/signup.module.scss'
 
-export default function Signup() {
+export default function Login() {
   const {
     register,
     handleSubmit,
