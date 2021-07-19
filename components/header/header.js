@@ -1,9 +1,16 @@
+import { useRouter } from 'next/router'
+
 import { BiSearch } from 'react-icons/bi'
-import { AiOutlineQuestionCircle, AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineMenu } from 'react-icons/ai'
+import { VscBell } from 'react-icons/vsc'
 
 import styles from '../../styles/header.module.scss'
 
+import NavLink from './Link'
+import * as Routes from '../../routePath'
+
 function Header({ title }) {
+  const router = useRouter()
   return (
     <div className={styles.header}>
       <div className={styles.headerTitle}>{title}</div>
@@ -11,9 +18,10 @@ function Header({ title }) {
         <div className={styles.infoItem}>
           <BiSearch />
         </div>
-        <div className={styles.infoItem}>
-          <AiOutlineQuestionCircle />
-        </div>{' '}
+        {/* nemidunam inja eshtebah kardam ya na ama umadam mesle component footer ye NavLink ba style jadid zadam faghat bara Notification, shayad age az link sade ham estefade mikardam kar mikard. */}
+        <NavLink href={Routes.notification} router={router}>
+          <VscBell />
+        </NavLink>{' '}
         <div className={styles.infoItem}>
           <AiOutlineMenu />
         </div>{' '}

@@ -1,14 +1,14 @@
-import { useRouter } from 'next/router';
-import { BsHouse, BsPerson } from 'react-icons/bs';
+import { useRouter } from 'next/router'
+import { BsHouse, BsPerson } from 'react-icons/bs'
 
-import NavLink from './Link';
-import MapIcon from './Icon.js';
+import NavLink from './Link'
+import MapIcon from './Icon.js'
 
-import * as Routes from '../../routePath';
-import styles from '../../styles/footer.module.scss';
+import * as Routes from '../../routePath'
+import styles from '../../styles/footer.module.scss'
 
 function Footer() {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <div className={styles.footer}>
@@ -24,7 +24,7 @@ function Footer() {
         <BsPerson className={styles.footerIcons} />
       </NavLink>
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

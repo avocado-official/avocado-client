@@ -1,5 +1,6 @@
 import styles from '../../styles/card.module.scss'
 import { BiMap } from 'react-icons/bi'
+
 const Card = ({ img, title, distance }) => {
   return (
     <div className={styles.card}>
