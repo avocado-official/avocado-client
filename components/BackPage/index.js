@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { BiArrowBack } from 'react-icons/bi'
+import { IoIosArrowBack } from 'react-icons/io'
 import styles from '../../styles/backpage.module.scss'
 
 const Back = () => {
@@ -13,7 +13,7 @@ const Back = () => {
     <div>
       <Link href='#' className={styles.backIcon}>
         <a onClick={aclick} className={styles.backIcon}>
-          <BiArrowBack />
+          <IoIosArrowBack />
         </a>
       </Link>
     </div>

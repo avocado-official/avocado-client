@@ -1,0 +1,41 @@
+@use 'colors';
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  background: #fff;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(242, 242, 242, 1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(242, 242, 242, 1);
+  box-shadow: 0px 0px 10px 1px rgba(242, 242, 242, 1);
+  &:hover {
+    -webkit-box-shadow: 0px 0px 10px 1px rgb(230, 230, 230);
+    -moz-box-shadow: 0px 0px 10px 1px rgb(226, 226, 226);
+    box-shadow: 0px 0px 10px 1px rgb(223, 223, 223);
+  }
+}
+
+.inputBox {
+  font-weight: 300;
+  font-size: 15px;
+  color: #999;
+}
+.prefix {
+  font-weight: 300;
+  font-size: 24px;
+  color: black;
+}
+
+.inputBox input {
+  flex-grow: 1;
+  font-size: 14px;
+  background: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
