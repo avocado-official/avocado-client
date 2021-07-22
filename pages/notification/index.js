@@ -5,7 +5,7 @@ export default function Notif() {
     <div>
       <Notification
         info='شما در رتبه ی اول تاثیر گذار ترین کاربر قرار گرفتید.'
-        time='10:30 AM'
+        time='10:30AM'
       />
     </div>
   )

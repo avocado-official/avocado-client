@@ -3,16 +3,15 @@
 .inputBox {
   display: flex;
   align-items: center;
-  max-width: 300px;
-  background: #fff;
+  background: white;
   border-radius: 4px;
   padding-left: 0.5rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row-reverse;
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(242, 242, 242, 1);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(242, 242, 242, 1);
-  box-shadow: 0px 0px 10px 1px rgba(242, 242, 242, 1);
+  font-size: 15px;
+  color: #999;
+
+  -webkit-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+  -moz-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+  box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
   &:hover {
     -webkit-box-shadow: 0px 0px 10px 1px rgb(230, 230, 230);
     -moz-box-shadow: 0px 0px 10px 1px rgb(226, 226, 226);
@@ -20,11 +19,6 @@
   }
 }
 
-.inputBox {
-  font-weight: 300;
-  font-size: 15px;
-  color: #999;
-}
 .prefix {
   font-weight: 300;
   font-size: 24px;
@@ -32,7 +26,6 @@
 }
 
 .inputBox input {
-  flex-grow: 1;
   font-size: 14px;
   background: #fff;
   border: none;

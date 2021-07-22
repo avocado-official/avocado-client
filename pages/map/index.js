@@ -1,14 +1,11 @@
 import Map from '../../components/Map'
-import Head from 'next/head'
-import Layout from '../../components/layout/layout'
+import Footer from '../../components/footer'
 
 export default function MapComp() {
   return (
     <div>
-      <Head />
-      <Layout headerTitle='نقشه'>
-        <Map />
-      </Layout>
+      <Map />
+      <Footer />
     </div>
   )
 }

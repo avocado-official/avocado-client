@@ -1,6 +1,7 @@
 @use 'colors';
 
 .header {
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   font-size: 20px;
@@ -9,9 +10,9 @@
 }
 
 .headerTitle {
+  font-size: 25px;
   font-weight: bold;
   margin-right: 10px;
-  margin-top: 5px;
 }
 
 .headerInfoDiv {

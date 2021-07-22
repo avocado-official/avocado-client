@@ -1,0 +1,35 @@
+@use 'colors';
+
+.container {
+  margin: 40px 3px 10px 3px;
+}
+.picfather {
+  display: flex;
+  justify-content: center;
+}
+.pic {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 55px;
+}
+.userInfo,
+.setting,
+.support {
+  font-size: 20px;
+  margin: 15px;
+  color: black;
+  &:hover {
+    color: colors.$color-4;
+  }
+}
+.khat {
+  width: 80%;
+  height: 0.2px;
+  background-color: gray;
+}
+.back {
+  position: absolute;
+  left: 50px;
+  color: black;
+}

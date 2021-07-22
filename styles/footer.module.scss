@@ -1,16 +1,22 @@
 @use 'colors';
 
 .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  bottom: 0%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }
 
 .item {
-  // width: 20%;
-  // height: 50px;
-  display: flex;
+  // position: fixed;
+
   cursor: pointer;
   font-size: 35px;
   align-items: center;
@@ -29,7 +35,3 @@
 .activeItem {
   color: colors.$color-4;
 }
-
-// .footerIcons {
-//   font-size: 35px;
-// }

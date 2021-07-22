@@ -1,6 +1,6 @@
-import Footer from '../footer/footer'
 import Header from '../header/header'
 import styles from '../../styles/layout.module.scss'
+import Footer from '../footer'
 
 function Layout({ children, headerTitle }) {
   return (
@@ -9,9 +9,8 @@ function Layout({ children, headerTitle }) {
         <Header title={headerTitle} />
       </div>
       <div className={styles.layOutMain}>{children}</div>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+      <div className={styles.footer}></div>
+      <Footer />
     </div>
   )
 }

@@ -7,25 +7,29 @@ import styles from '../../styles/header.module.scss'
 
 import NavLink from './Link'
 import * as Routes from '../../routePath'
+
 import Search from '../SearchBox'
 
 function Header({ title }) {
   const router = useRouter()
+
   return (
-    <div className={styles.header}>
-      <div className={styles.headerTitle}>{title}</div>
-      <div className={styles.headerInfoDiv}>
-        <div className={styles.infoItem}>
-          <Search />
+    <>
+      <div className={styles.header}>
+        <div className={styles.headerTitle}>{title}</div>
+        <div className={styles.headerInfoDiv}>
+          <div className={styles.infoItem}>
+            <Search />
+          </div>
+          <NavLink href={Routes.notification} router={router}>
+            <VscBell />
+          </NavLink>{' '}
+          <div className={styles.infoItem}>
+            <AiOutlineMenu />
+          </div>{' '}
         </div>
-        <NavLink href={Routes.notification} router={router}>
-          <VscBell />
-        </NavLink>{' '}
-        <div className={styles.infoItem}>
-          <AiOutlineMenu />
-        </div>{' '}
       </div>
-    </div>
+    </>
   )
 }
 
