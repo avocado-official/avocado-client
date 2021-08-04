@@ -5,3 +5,14 @@
 //     dest: 'pwa-config',
 //   },
 // });
+module.exports = {
+    async redirects() {
+        return [
+            {
+                source: '/swap',
+                destination: '/',
+                permanent: false
+            }
+        ]
+    }
+}

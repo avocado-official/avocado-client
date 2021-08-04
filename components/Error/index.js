@@ -7,7 +7,7 @@ export default function Error({ field, type }) {
     case 'required':
       message = 'الزامی است.'
       break
-    case 'maxLenght':
+    case 'maxLength':
       message = 'بیش از حد مجاز است.'
       break
     case 'minLength':
@@ -16,6 +16,12 @@ export default function Error({ field, type }) {
     case 'city':
       message = 'لطفا شهر محل سکونت خود را انتخاب کنید.'
       break
+      case 'phoneNumberLength':
+        message = 'باید 11 رقمی باشد به طور مثال(09198884466).'
+        break
+        case 'invalidInformation': 
+        message = 'کاربری با مشخصات وارد شده وجود ندارد.'
+        break
     default:
       message = 'معتبر نیست.'
   }

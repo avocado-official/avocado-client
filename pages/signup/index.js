@@ -4,15 +4,31 @@ import { useForm } from 'react-hook-form'
 import Error from '../../components/Error'
 import Input from '../../components/Input/index'
 import styles from '../../styles/signup.module.scss'
+import baseURL from '../../components/baseURL'
 
 export default function Signup() {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setError
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => {
+    fetch(`https://morning-eyrie-67516.herokuapp.com/${baseURL}/v1/register`, {
+      method: 'POST',
+      body:{
+        name: data.name,
+        phonenumber: data.phone,
+        password: data.password
+      }
+    }).then(res => res.json)
+    .then(json => console.log(json))
+    // setError('password' , {
+    //   type: 'invalidInformation',
+    // })
+    console.log(data)
+  }
 
   return (
     <div className='container'>
@@ -24,15 +40,18 @@ export default function Signup() {
             autoComplete='off'
           >
             <Input
-              {...register('name', { required: true, maxLength: 20 })}
+              {...register('name', { required: true, maxLength: 45  })}
               placeholder='نام'
+              
+              
             />
             {errors.name?.type === 'required' && (
               <Error field='نام' type='required' />
             )}
             {errors.name?.type === 'maxLength' && (
-              <Error field='نام' type='maxLenght' />
+              <Error field='تعداد کاراکتر های نام' type='maxLength' />
             )}
+            
 
             <Input
               type='tel'
@@ -41,6 +60,7 @@ export default function Signup() {
                 pattern:
                   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
                 maxLength: 11,
+                minLength: 11,
               })}
               placeholder='تلفن همراه'
             />
@@ -51,15 +71,18 @@ export default function Signup() {
               <Error field='تلفن همراه' type='pattern' />
             )}
             {errors.phone?.type === 'maxLength' && (
-              <Error field='تلفن همراه' type='pattern' />
+              <Error field='تلفن همراه' type='phoneNumberLength' />
+            )}
+            {errors.phone?.type === 'minLength' && (
+              <Error field='تلفن همراه' type='phoneNumberLength' />
             )}
 
             <Input
               type='password'
               {...register('password', {
                 required: true,
-                maxLength: 18,
-                minLength: 7,
+                maxLength: 64,
+                minLength: 6,
               })}
               placeholder='رمز عبور'
             />
@@ -67,10 +90,13 @@ export default function Signup() {
               <Error field='رمز عبور' type='required' />
             )}
             {errors.password?.type === 'maxLength' && (
-              <Error field='رمز عبور' type='maxLength' />
+              <Error field='تعداد کاراکتر های رمز عبور' type='maxLength' />
             )}
             {errors.password?.type === 'minLength' && (
-              <Error field='رمز عبور' type='minLength' />
+              <Error field='تعداد کاراکتر های رمز عبور' type='minLength' />
+            )}
+            {errors.password?.type === 'invalidInformation' && (
+              <Error type='invalidInformation' />
             )}
 
             <Input className={styles.button} type='submit' value='ثبت نام' />
