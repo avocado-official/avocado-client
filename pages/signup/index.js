@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 
 import Error from '../../components/Error'
-import baseURL from '../../components/baseURL'
+import baseURL from '../../staticRes/baseURL'
 import Input from '../../components/Input/index'
 import urlencoded from '../../helpers/urlencoded';
 import styles from '../../styles/signup.module.scss'
@@ -17,7 +17,7 @@ export default function Signup() {
   } = useForm()
 
   const onSubmit = (data) => {
-    fetch(`https://wallkind.iran.liara.run/v1/register/`, {
+    fetch(`${baseURL}/v1/register/`, {
       method: 'POST',
       mode: 'cors',
       headers: {

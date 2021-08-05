@@ -6,7 +6,7 @@ import { VscBell } from 'react-icons/vsc'
 import styles from '../../styles/header.module.scss'
 
 import NavLink from './Link'
-import * as Routes from '../../routePath'
+import * as Routes from '../../staticRes/routePath'
 
 import Search from '../SearchBox'
 
