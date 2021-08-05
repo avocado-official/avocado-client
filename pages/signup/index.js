@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
+
 import Error from '../../components/Error'
+import baseURL from '../../components/baseURL'
 import Input from '../../components/Input/index'
 import styles from '../../styles/signup.module.scss'
-import baseURL from '../../components/baseURL'
 
 export default function Signup() {
   const {
@@ -15,13 +16,17 @@ export default function Signup() {
   } = useForm()
 
   const onSubmit = (data) => {
-    fetch(`https://morning-eyrie-67516.herokuapp.com/${baseURL}/v1/register`, {
+    fetch(`${baseURL}/v1/register`, {
       method: 'POST',
-      body:{
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({
         name: data.name,
         phonenumber: data.phone,
         password: data.password
-      }
+      })
     }).then(res => res.json)
     .then(json => console.log(json))
     // setError('password' , {
