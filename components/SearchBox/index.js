@@ -2,7 +2,7 @@ import { BiSearch } from 'react-icons/bi'
 
 import styles from '../../styles/search.module.scss'
 
-import * as Routes from '../../routePath'
+import * as Routes from '../../staticRes/routePath'
 import { useRouter } from 'next/router'
 
 const Search = (props) => {

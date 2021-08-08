@@ -3,8 +3,9 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 
 import Error from '../../components/Error'
-import baseURL from '../../components/baseURL'
+import baseURL from '../../staticRes/baseURL'
 import Input from '../../components/Input/index'
+import urlencoded from '../../helpers/urlencoded';
 import styles from '../../styles/signup.module.scss'
 
 export default function Signup() {
@@ -16,22 +17,18 @@ export default function Signup() {
   } = useForm()
 
   const onSubmit = (data) => {
-    fetch(`${baseURL}/v1/register`, {
+    fetch(`${baseURL}/v1/register/`, {
       method: 'POST',
+      mode: 'cors',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      credentials: 'include',
-      body: JSON.stringify({
-        name: data.name,
-        phonenumber: data.phone,
-        password: data.password
-      })
-    }).then(res => res.json)
-    .then(json => console.log(json))
-    // setError('password' , {
-    //   type: 'invalidInformation',
-    // })
+      body: urlencoded(data),
+    })
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+    })
     console.log(data)
   }
 

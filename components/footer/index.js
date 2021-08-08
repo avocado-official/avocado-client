@@ -4,7 +4,7 @@ import { BsHouse, BsPerson } from 'react-icons/bs'
 import NavLink from './Link'
 import MapIcon from './Icon.js'
 
-import * as Routes from '../../routePath'
+import * as Routes from '../../staticRes/routePath'
 import styles from '../../styles/footer.module.scss'
 
 function Footer() {
