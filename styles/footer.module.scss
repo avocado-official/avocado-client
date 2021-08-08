@@ -1,37 +1,37 @@
 @use 'colors';
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  bottom: 0%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	bottom: 0%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
 }
 
 .item {
-  // position: fixed;
+	// position: fixed;
 
-  cursor: pointer;
-  font-size: 35px;
-  align-items: center;
-  text-decoration: none;
-  flex-direction: column;
-  color: black;
-  justify-content: center;
-  transition: color 500ms;
-  padding: 0 15px;
+	cursor: pointer;
+	font-size: 35px;
+	align-items: center;
+	text-decoration: none;
+	flex-direction: column;
+	color: black;
+	justify-content: center;
+	transition: color 500ms;
+	padding: 0 15px;
 
-  &:hover {
-    color: colors.$color-2;
-  }
+	&:hover {
+		color: colors.$color-2;
+	}
 }
 
 .activeItem {
-  color: colors.$color-4;
+	color: colors.$color-4;
 }

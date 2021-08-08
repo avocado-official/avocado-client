@@ -1,36 +1,33 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
-import { AiOutlineMenu } from 'react-icons/ai'
-import { VscBell } from 'react-icons/vsc'
+import { AiOutlineMenu } from 'react-icons/ai';
+import { VscBell } from 'react-icons/vsc';
 
-import styles from '../../styles/header.module.scss'
+import styles from '../../styles/header.module.scss';
 
-import NavLink from './Link'
-import * as Routes from '../../staticRes/routePath'
+import NavLink from './Link';
+import * as Routes from '../../staticRes/routePath';
 
-import Search from '../SearchBox'
+import Search from '../SearchBox';
 
 function Header({ title }) {
-  const router = useRouter()
+	const router = useRouter();
 
-  return (
-    <>
-      <div className={styles.header}>
-        <div className={styles.headerTitle}>{title}</div>
-        <div className={styles.headerInfoDiv}>
-          <div className={styles.infoItem}>
-            <Search />
-          </div>
-          <NavLink href={Routes.notification} router={router}>
-            <VscBell />
-          </NavLink>{' '}
-          <div className={styles.infoItem}>
-            <AiOutlineMenu />
-          </div>{' '}
-        </div>
-      </div>
-    </>
-  )
+	return (
+		<>
+			<div className={styles.header}>
+				<div className={styles.headerTitle}>{title}</div>
+				<div className={styles.headerInfoDiv}>
+					<div className={styles.infoItem}>
+						<Search />
+					</div>
+					<NavLink href={Routes.notification} router={router}>
+						<VscBell />
+					</NavLink>{' '}
+				</div>
+			</div>
+		</>
+	);
 }
 
-export default Header
+export default Header;

@@ -1,0 +1,39 @@
+@use 'colors';
+
+.inputBox {
+	margin-top: 5px;
+	display: flex;
+	align-items: center;
+	background: white;
+	border-radius: 4px;
+	font-size: 18px;
+	color: #999;
+
+	-webkit-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+	-moz-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+	box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+	&:hover {
+		-webkit-box-shadow: 0px 0px 10px 1px rgb(230, 230, 230);
+		-moz-box-shadow: 0px 0px 10px 1px rgb(226, 226, 226);
+		box-shadow: 0px 0px 10px 1px rgb(223, 223, 223);
+	}
+}
+.citySelection {
+	border-radius: 4px;
+	border: solid 1px white;
+	font-size: 16px;
+	color: colors.$color-3;
+}
+.prefix {
+	font-weight: 300;
+	font-size: 24px;
+	color: black;
+}
+
+.inputBox input {
+	font-size: 16px;
+	background: #fff;
+	border: none;
+	outline: none;
+	padding: 0.5rem;
+}
