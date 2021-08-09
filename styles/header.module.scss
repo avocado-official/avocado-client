@@ -1,33 +1,33 @@
 @use 'colors';
 
 .header {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  align-items: center;
-  justify-content: space-between;
+	margin-top: 12px;
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .headerTitle {
-  font-size: 25px;
-  font-weight: bold;
-  margin-right: 10px;
+	font-size: 25px;
+	font-weight: bold;
+	margin-right: 10px;
 }
 
 .headerInfoDiv {
-  display: flex;
-  flex-direction: row;
-  font-size: 25px;
+	display: flex;
+	flex-direction: row;
+	font-size: 25px;
 }
 
 .infoItem {
-  color: black;
-  font-size: 25px;
-  margin-top: 5px;
-  margin-left: 10px;
-  cursor: pointer;
-  &:hover {
-    color: colors.$color-3;
-  }
+	color: black;
+	font-size: 25px;
+	margin-top: 5px;
+	margin-left: 10px;
+	cursor: pointer;
+	&:hover {
+		color: colors.$color-3;
+	}
 }

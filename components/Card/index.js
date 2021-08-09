@@ -1,7 +1,7 @@
 import styles from '../../styles/card.module.scss';
 import { BiMap } from 'react-icons/bi';
 
-const Card = ({ img, title, distance }) => {
+const Card = ({ img, title, address }) => {
 	return (
 		<div className="container">
 			<div className="row justify-content-center">
@@ -10,7 +10,7 @@ const Card = ({ img, title, distance }) => {
 						<img src={img} className={styles.img} />
 						<p className={styles.title}>{title}</p>
 						<p className={styles.distance}>
-							<BiMap /> {distance}
+							<BiMap /> {address}
 						</p>
 					</div>
 				</div>

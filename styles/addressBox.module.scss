@@ -1,13 +1,32 @@
 @use 'colors';
 
-.inputBox {
-	margin-top: 5px;
+.headerBox {
+	margin-top: 12px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.header {
+	margin-top: 12px;
+	font-size: 25px;
+	font-weight: bold;
+	margin-right: 12px;
+}
+.linkadrs {
+	color: colors.$color-3;
+	&:hover {
+		color: colors.$color-4;
+	}
+}
+.newadrs {
+	height: 40px;
+	padding: 0px 12px;
 	display: flex;
 	align-items: center;
 	background: white;
 	border-radius: 4px;
 	font-size: 18px;
-	color: #999;
 
 	-webkit-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
 	-moz-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
@@ -18,22 +37,62 @@
 		box-shadow: 0px 0px 10px 1px rgb(223, 223, 223);
 	}
 }
-.citySelection {
+
+// address component
+.ul {
+	list-style-type: none;
+}
+.listbox {
+	padding-top: 10px;
+	margin-top: 6px;
+	display: flex;
+	align-items: center;
+	background: white;
 	border-radius: 4px;
-	border: solid 1px white;
 	font-size: 16px;
+	color: #999;
+	-webkit-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+	-moz-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+	box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
+}
+.links {
+	padding-bottom: 15px;
+}
+.edit {
+	font-size: 16px;
+	padding-left: 4px;
 	color: colors.$color-3;
 }
-.prefix {
-	font-weight: 300;
-	font-size: 24px;
-	color: black;
-}
-
-.inputBox input {
+.delete {
 	font-size: 16px;
-	background: #fff;
-	border: none;
-	outline: none;
-	padding: 0.5rem;
+	color: rgb(189, 33, 33);
 }
+// .citySelection {
+// 	border-radius: 4px;
+// 	border: solid 1px white;
+// 	font-size: 16px;
+// 	background-color: white;
+// 	color: colors.$color-3;
+// }
+// .prefix {
+// 	margin-right: 3px;
+// 	margin-bottom: 2px;
+// 	font-weight: 300;
+// 	font-size: 24px;
+// 	color: black;
+// }
+
+// .inputBox input {
+// 	font-size: 16px;
+// 	background: #fff;
+// 	border: none;
+// 	outline: none;
+// }
+// .suffix {
+// 	margin-right: 5px;
+// 	font-size: 18px;
+// 	color: colors.$color-3;
+// 	&:hover {
+// 		color: colors.$color-4;
+// 	}
+// }

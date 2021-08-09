@@ -1,28 +1,28 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100%;
-  // position: static;
-  direction: rtl;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+	// position: static;
+	direction: rtl;
 }
 
 .header {
-  width: 100%;
-  height: 50px;
-  background-color: white;
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	margin-bottom: 20px;
 }
 
 .layOutMain {
-  width: 100%;
-  min-height: 100%;
-  background-color: #fff;
+	width: 100%;
+	min-height: 100%;
+	background-color: #fff;
 }
 
 .footer {
-  width: 100%;
-  height: 50px;
-  background-color: #fff;
-  bottom: 0;
-  position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	position: absolute;
 }
