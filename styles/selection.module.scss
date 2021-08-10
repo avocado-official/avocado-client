@@ -1,0 +1,21 @@
+@use 'colors';
+// .form {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+.city,
+.place {
+	margin-top: 10px;
+	font-size: 18px;
+}
+.place {
+	margin-top: 30px;
+}
+.select {
+	font-size: 18px;
+	color: colors.$color-3;
+	background-color: white;
+	border-radius: 5px;
+	border: solid 0.25px colors.$color-3;
+}

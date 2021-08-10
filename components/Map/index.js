@@ -1,7 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxLanguage from '@mapbox/mapbox-gl-language';
 import React, { useRef, useEffect, useState } from 'react';
-import AddressBox from '../AddressBox';
 
 import styles from '../../styles/map.module.scss';
 
@@ -17,7 +16,7 @@ export default function MapComp() {
 	useEffect(() => {
 		if (map.current) return;
 
-		var language = new MapboxLanguage();
+		let language = new MapboxLanguage();
 
 		map.current = new mapboxgl.Map({
 			container: mapContainer.current,
