@@ -13,7 +13,6 @@
 	margin-right: 12px;
 }
 .pmap {
-	margin-top: 30px;
 	font-size: 18px;
 }
 
@@ -21,9 +20,8 @@
 	width: 100%;
 	height: 50px;
 	color: white;
-	margin-top: 15px;
-	border-radius: 8px;
-	// border: #ffab73 solid;
+	margin-top: 28px;
+	border-radius: 4px;
 	border: colors.$color-4 solid;
 	background-color: colors.$color-4;
 	font-size: 20px;
@@ -39,8 +37,7 @@
 	height: 50px;
 	color: white;
 	margin-top: 15px;
-	border-radius: 8px;
-	// border: #ffab73 solid;
+	// border-radius: 4px;
 	border: rgb(136, 13, 13) solid;
 	background-color: rgb(136, 13, 13);
 	font-size: 20px;
@@ -49,4 +46,15 @@
 		background-color: rgb(187, 59, 59) (136, 13, 13);
 		border: rgb(187, 59, 59) (136, 13, 13);
 	}
+}
+.inputs {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+}
+.mapbox {
+	margin-top: 50px;
 }

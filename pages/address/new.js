@@ -1,5 +1,6 @@
 import cn from 'classnames';
 
+import Link from 'next/link';
 import Input from '../../components/Input/index';
 import MapComp from '../../components/Map';
 import Selection from '../../components/Selection';
@@ -15,15 +16,19 @@ const newAddress = () => {
 						<div className={styles.headerBox}>
 							<p className={styles.header}>آدرس جدید</p>
 						</div>
-						<div>
-							<Selection />
-						</div>
-						<div>
-							<p className={styles.pmap}>نقشه</p>
-							<MapComp />
-						</div>
-						<Input className={styles.button} type="submit" value="ثبت" />
-						<Input className={styles.cancel} type="submit" value="انصراف" />
+						<form>
+							<div>
+								<Selection />
+							</div>
+							<div className={styles.mapbox}>
+								<p className={styles.pmap}>نقشه</p>
+								<MapComp />
+							</div>
+							<div className={styles.inputs}>
+								<Input className={styles.button} type="submit" value="ثبت" />
+								<Input className={styles.cancel} type="submit" value="انصراف" />
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

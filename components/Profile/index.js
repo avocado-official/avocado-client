@@ -16,8 +16,8 @@ const ProfileComp = ({ img }) => {
 				</div>
 
 				<div className={styles.userInfo}>
-					<BsInfo />
-					<Link href="/">
+					<BsInfo className={styles.icon} />
+					<Link href="/user-info">
 						<a className={styles.userInfo}> اطلاعات کاربری</a>
 					</Link>
 					<IoChevronBack className={styles.back} />
@@ -26,7 +26,7 @@ const ProfileComp = ({ img }) => {
 				<div className={cn(styles.khat, 'col-11 offset-1')} />
 
 				<div className={styles.setting}>
-					<RiSettings5Line />
+					<RiSettings5Line className={styles.icon} />
 					<Link href="/setting">
 						<a className={styles.setting}>تنظیمات</a>
 					</Link>
@@ -36,8 +36,8 @@ const ProfileComp = ({ img }) => {
 				<div className={cn(styles.khat, 'col-11 offset-1')} />
 
 				<div className={styles.support}>
-					<BiSupport />
-					<Link href="/">
+					<BiSupport className={styles.icon} />
+					<Link href="/contact-us">
 						<a className={styles.support}>پشتیبانی</a>
 					</Link>
 					<IoChevronBack className={styles.back} />
