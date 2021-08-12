@@ -10,6 +10,9 @@ export default function Error({ field, type }) {
     case 'maxLength':
       message = 'بیش از حد مجاز است.'
       break
+    case 'wrong-password':
+      message = 'یا شماره اشتباه است.'
+      break
     case 'minLength':
       message = 'کمتر از حد مجاز است.'
       break

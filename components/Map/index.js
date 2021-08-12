@@ -6,12 +6,13 @@ import styles from '../../styles/map.module.scss';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpcmluYXByIiwiYSI6ImNrcjZvYjl4bTNocDMycG82d205enNwN24ifQ.tAomZwI2G5_9o9O9DD1D8w';
 
-export default function MapComp() {
+export default function MapComp(props) {
 	const mapContainer = useRef(null);
 	const map = useRef(null);
 	const [lng, setLng] = useState(51.38);
 	const [lat, setLat] = useState(35.68);
 	const [zoom, setZoom] = useState(10);
+	let isSet = false;
 
 	useEffect(() => {
 		if (map.current) return;
@@ -31,19 +32,27 @@ export default function MapComp() {
 
 		map.current.addControl(language);
 
-		var marker = new mapboxgl.Marker({
-			color: '#21897e',
-			draggable: true,
-		})
-			.setLngLat([51.3022811, 35.7740779])
-			.addTo(map.current);
+		// map.current.on('click', (e) => {
+
+		// 	if (!isSet) {
+		// 		isSet = true;
+		// 		var marker = new mapboxgl.Marker({
+		// 			color: '#21897e',
+		// 			draggable: true,
+		// 		})
+		// 			.setLngLat([e.lngLat.lng, e.lngLat.lat])
+		// 			.addTo(map.current);
+		// 	}
+
+		// });
+				
 	});
 
 	return (
 		<div className="container">
 			<div className="row justify-content-center">
 				<div className="col-12 ">
-					<div ref={mapContainer} className={styles.mapContainer} />
+					<div ref={mapContainer} className={styles.mapContainer} style={{ height: props.height ? `${props.height}vh` : '100vh' }} />
 				</div>
 			</div>
 		</div>

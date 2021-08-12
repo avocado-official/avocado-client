@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import Error from '../../components/Error'
 import Input from '../../components/Input/index'
@@ -8,11 +9,22 @@ import styles from '../../styles/signup.module.scss'
 export default function Login() {
   const {
     register,
+    setError,
     handleSubmit,
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const router = useRouter();
+
+  const onSubmit = (data) => {
+    if (data.phone === '09352564751' && data.password === 'matinmatin') {
+      router.push('/profile');
+    } else {
+      setError("password", {
+        type: "wrong-password",
+      })
+    }
+  }
 
   return (
     <div className='container'>
@@ -33,14 +45,9 @@ export default function Login() {
               })}
               placeholder='تلفن همراه'
             />
-            {errors.phone?.type === 'required' && (
-              <Error field='تلفن همراه' type='required' />
-            )}
-            {errors.phone?.type === 'pattern' && (
-              <Error field='تلفن همراه' type='pattern' />
-            )}
-            {errors.phone?.type === 'maxLength' && (
-              <Error field='تلفن همراه' type='pattern' />
+
+            {errors.phone?.type && (
+              <Error field='تلفن همراه' type={errors.phone.type} />
             )}
 
             <Input
@@ -52,15 +59,11 @@ export default function Login() {
               })}
               placeholder='رمز عبور'
             />
-            {errors.password?.type === 'required' && (
-              <Error field='رمز عبور' type='required' />
+
+            {errors.password?.type && (
+              <Error field='رمز عبور' type={errors.password.type} />
             )}
-            {errors.password?.type === 'maxLength' && (
-              <Error field='رمز عبور' type='maxLength' />
-            )}
-            {errors.password?.type === 'minLength' && (
-              <Error field='رمز عبور' type='minLength' />
-            )}
+
             <Link href='/forget'>
               <a className={styles.problemLink}>فراموشی رمز؟</a>
             </Link>
