@@ -10,6 +10,7 @@ const initialState = {
   user: {},
   goods: [],
   number: 0,
+  addresses: [],
 }
 
 const reducer = (state = initialState, action) => {
