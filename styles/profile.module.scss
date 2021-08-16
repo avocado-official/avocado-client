@@ -8,23 +8,24 @@
 	justify-content: center;
 }
 .pic {
+	background-color: colors.$color-2;
 	height: 150px;
 	width: 150px;
 	border-radius: 50%;
-	margin-bottom: 55px;
+	margin-bottom: 70px;
 }
 .userInfo,
 .setting,
 .support {
 	font-size: 20px;
-	margin: 15px;
+	margin: 12px 5px 12px 0px;
 	color: black;
 	&:hover {
 		color: colors.$color-4;
 	}
 }
 .icon {
-	margin-right: 5;
+	margin-right: 30px;
 }
 .khat {
 	width: 80%;

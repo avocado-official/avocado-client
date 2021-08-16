@@ -10,7 +10,6 @@
 	margin-top: 12px;
 	font-size: 25px;
 	font-weight: bold;
-	margin-right: 12px;
 }
 .pmap {
 	font-size: 18px;
@@ -57,4 +56,21 @@
 }
 .mapbox {
 	margin-top: 50px;
+}
+
+.city,
+.place {
+	margin-top: 10px;
+	font-size: 18px;
+}
+.place {
+	margin-top: 30px;
+}
+.select {
+	font-size: 18px;
+	color: colors.$color-4;
+	background-color: white;
+	border-radius: 5px;
+	border: solid 0.25px colors.$color-4;
+	height: 45px;
 }

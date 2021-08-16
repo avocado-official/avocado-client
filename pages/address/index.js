@@ -11,15 +11,16 @@ const Address = () => {
 		<div>
 			<div className="container">
 				<div className="row justify-content-center">
-					<div className="col-12 col-md-12"></div>
-					<div className={styles.headerBox}>
-						<p className={styles.header}>آدرس ها</p>
-						<div className={styles.newadrs}>
-							<Link href="/address/new">
-								<a className={styles.linkadrs}>
-									افزودن آدرس <BsPlus />
-								</a>
-							</Link>
+					<div className="col-12 col-md-12">
+						<div className={styles.headerBox}>
+							<p className={styles.header}>آدرس ها</p>
+							<div className={styles.newadrs}>
+								<Link href="/address/new">
+									<a className={styles.linkadrs}>
+										افزودن آدرس <BsPlus />
+									</a>
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -18,7 +18,7 @@ const ProfileComp = ({ img }) => {
 				<div className={styles.userInfo}>
 					<BsInfo className={styles.icon} />
 					<Link href="/user-info">
-						<a className={styles.userInfo}> اطلاعات کاربری</a>
+						<a className={styles.userInfo}>اطلاعات کاربری</a>
 					</Link>
 					<IoChevronBack className={styles.back} />
 				</div>
