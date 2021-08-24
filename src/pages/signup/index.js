@@ -6,7 +6,7 @@ import Error from '../../components/Error';
 import baseURL from '../../staticRes/baseURL';
 import Input from '../../components/Input/index';
 import urlencoded from '../../helpers/urlencoded';
-import styles from '../../styles/signup.module.scss';
+import styles from '../../../styles/signup.module.scss';
 
 export default function Signup() {
 	const {
