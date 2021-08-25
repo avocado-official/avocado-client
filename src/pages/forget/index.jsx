@@ -1,10 +1,11 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
+
 import Error from '../../components/Error'
 import Input from '../../components/Input/index'
-import styles from '../../styles/signup.module.scss'
-import forgetStyles from '../../styles/forget-password.module.scss'
+import styles from '../../../styles/signup.module.scss'
+import forgetStyles from '../../../styles/forget-password.module.scss'
 
 export default function ForgetPassword() {
   const {
@@ -14,8 +15,7 @@ export default function ForgetPassword() {
   } = useForm()
 
   const router = useRouter()
-  const onSubmit = (data) => {
-    console.log(data)
+  const onSubmit = () => {
     router.push('/forget/code')
   }
 

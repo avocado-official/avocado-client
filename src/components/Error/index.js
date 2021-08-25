@@ -1,5 +1,7 @@
 import React from 'react'
-import styles from '../../styles/error.module.scss'
+
+import styles from './error.module.scss'
+
 export default function Error({ field, type }) {
   let message
 
