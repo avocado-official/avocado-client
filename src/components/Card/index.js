@@ -3,9 +3,9 @@ import { BiMap } from 'react-icons/bi';
 
 const Card = ({ img, title, address }) => {
 	return (
-		<div className="container">
-			<div className="row justify-content-center">
-				<div className="col-12 col-md-10">
+		<div className='container'>
+			<div className='row justify-content-center'>
+				<div className='col-12 col-md-10'>
 					<div className={styles.card}>
 						<img src={img} className={styles.img} />
 						<p className={styles.title}>{title}</p>
