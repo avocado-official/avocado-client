@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
-import '../styles/globals.scss'
+import '../../styles/globals.scss'
 import 'bootstrap/dist/css/bootstrap.rtl.css'
 import { useStore } from '../store'
 import { Provider } from 'react-redux'
