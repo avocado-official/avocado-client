@@ -14,18 +14,10 @@
 	border-radius: 50%;
 	margin-bottom: 70px;
 }
-.userInfo,
-.setting,
-.support {
-	font-size: 20px;
-	margin: 12px 5px 12px 0px;
-	color: black;
-	&:hover {
-		color: colors.$color-4;
-	}
-}
+
 .icon {
-	margin-right: 30px;
+	margin-right: 20px;
+	margin-left: 5px;
 }
 .khat {
 	width: 80%;
@@ -33,11 +25,16 @@
 	background-color: rgb(177, 177, 177);
 }
 .back {
-	margin-top: 4px;
 	position: absolute;
 	left: 50px;
-	color: black;
-	&:hover {
-		color: colors.$color-4;
-	}
+}
+.box {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	margin: 12px 20px 12px 20px;
+}
+.box:hover {
+	transition: color 500ms;
+	color: colors.$color-4;
 }
