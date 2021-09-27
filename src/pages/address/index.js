@@ -11,6 +11,7 @@ import axios from 'axios';
 import styles from '../../styles/addressBox.module.scss';
 const Address = () => {
 	const [items, setItems] = useState([]);
+
 	useEffect(() => {
 		console.log(`${SERVER_URL}/v1/addresses`);
 		axios
@@ -53,7 +54,7 @@ const Address = () => {
 				</div>
 			</div>
 			{items.map((item) => (
-				<AddressBox liAddress={item.name} />
+				<AddressBox item={item} />
 			))}
 			<Footer />
 		</div>
