@@ -4,7 +4,8 @@ import React, { useRef, useEffect, useState } from 'react';
 
 import styles from '../../styles/map.module.scss';
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpcmluYXByIiwiYSI6ImNrcjZvYjl4bTNocDMycG82d205enNwN24ifQ.tAomZwI2G5_9o9O9DD1D8w';
+mapboxgl.accessToken =
+	'pk.eyJ1Ijoic2hpcmluYXByIiwiYSI6ImNrcjZvYjl4bTNocDMycG82d205enNwN24ifQ.tAomZwI2G5_9o9O9DD1D8w';
 
 export default function MapComp(props) {
 	const mapContainer = useRef(null);
@@ -27,7 +28,7 @@ export default function MapComp(props) {
 		});
 
 		mapboxgl.setRTLTextPlugin(
-			'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
+			'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js'
 		);
 
 		map.current.addControl(language);
@@ -45,14 +46,17 @@ export default function MapComp(props) {
 		// 	}
 
 		// });
-				
 	});
 
 	return (
-		<div className="container">
-			<div className="row justify-content-center">
-				<div className="col-12 ">
-					<div ref={mapContainer} className={styles.mapContainer} style={{ height: props.height ? `${props.height}vh` : '100vh' }} />
+		<div className='container'>
+			<div className='row justify-content-center'>
+				<div className='col-12 '>
+					<div
+						ref={mapContainer}
+						className={styles.mapContainer}
+						style={{ height: props.height ? `${props.height}vh` : '82vh' }}
+					/>
 				</div>
 			</div>
 		</div>
