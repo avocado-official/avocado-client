@@ -1,5 +1,5 @@
 import Header from '../header';
-import styles from '../../styles/layout.module.scss';
+import styles from './layout.module.scss';
 import Footer from '../footer';
 
 function Layout({ children, headerTitle }) {

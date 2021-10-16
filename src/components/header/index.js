@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { VscBell } from 'react-icons/vsc';
 
-import styles from '../../styles/header.module.scss';
+import styles from './header.module.scss';
 
 import NavLink from './Link';
 import * as Routes from '../../staticRes/routePath';

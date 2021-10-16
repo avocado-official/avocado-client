@@ -1,4 +1,4 @@
-import styles from '../../styles/card.module.scss';
+import styles from './card.module.scss';
 import { BiMap } from 'react-icons/bi';
 
 const Card = ({ img, title, address }) => {

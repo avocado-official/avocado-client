@@ -1,0 +1,11 @@
+@use '../../styles/colors';
+
+.backIcon {
+	color: black;
+	margin: 0px 0px 5px 5px;
+	font-size: 30px;
+	float: left;
+	&:hover {
+		color: colors.$color-3;
+	}
+}

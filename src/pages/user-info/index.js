@@ -3,7 +3,7 @@ import Layout from '../../components/layout';
 import { useForm } from 'react-hook-form';
 import { AiOutlineEdit } from 'react-icons/ai';
 
-import styles from '../../styles/signup.module.scss';
+import styles from '../signup/signup.module.scss';
 
 const userInfo = () => {
 	const {

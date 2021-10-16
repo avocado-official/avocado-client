@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from '../../styles/profile.module.scss';
+import styles from './profile.module.scss';
 import { IoChevronBack } from 'react-icons/io5';
 import { BsInfo } from 'react-icons/bs';
 import { BiSupport } from 'react-icons/bi';

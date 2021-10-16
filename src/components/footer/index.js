@@ -5,7 +5,7 @@ import NavLink from './Link';
 import MapIcon from './Icon.js';
 
 import * as Routes from '../../staticRes/routePath';
-import styles from '../../styles/footer.module.scss';
+import styles from './footer.module.scss';
 
 function Footer() {
 	const router = useRouter();

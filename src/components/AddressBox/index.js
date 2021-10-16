@@ -1,4 +1,4 @@
-import styles from '../../styles/addressBox.module.scss';
+import styles from './addressBox.module.scss';
 import { useState } from 'react';
 
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai';

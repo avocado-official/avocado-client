@@ -2,7 +2,7 @@ import mapboxgl from 'mapbox-gl';
 import MapboxLanguage from '@mapbox/mapbox-gl-language';
 import React, { useRef, useEffect, useState } from 'react';
 
-import styles from '../../styles/map.module.scss';
+import styles from './map.module.scss';
 
 mapboxgl.accessToken =
 	'pk.eyJ1Ijoic2hpcmluYXByIiwiYSI6ImNrcjZvYjl4bTNocDMycG82d205enNwN24ifQ.tAomZwI2G5_9o9O9DD1D8w';

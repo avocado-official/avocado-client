@@ -8,7 +8,7 @@ import { BsPlus } from 'react-icons/bs';
 
 import axios from 'axios';
 
-import styles from '../../styles/addressBox.module.scss';
+import styles from '../../components/AddressBox/addressBox.module.scss';
 const Address = () => {
 	const [items, setItems] = useState([]);
 

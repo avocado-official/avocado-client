@@ -1,4 +1,4 @@
-import styles from '../../styles/inputComponent.module.scss';
+import styles from './inputComponent.module.scss';
 const Input = ({ className, icon, ...props }) => (
 	<>
 		<div className={styles.inputDiv}>

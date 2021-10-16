@@ -1,6 +1,6 @@
 // import Back from '../BackPage';
 
-import styles from '../../styles/notif.module.scss';
+import styles from './notif.module.scss';
 
 const Notification = ({ info, time }) => {
 	return (
