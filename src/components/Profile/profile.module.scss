@@ -2,6 +2,7 @@
 
 .container {
 	margin: 40px 3px 10px 3px;
+	cursor: pointer;
 }
 .picfather {
 	display: flex;
@@ -35,6 +36,6 @@
 	margin: 12px 20px 12px 20px;
 }
 .box:hover {
-	transition: color 500ms;
+	transition: color 3s;
 	color: colors.$color-4;
 }

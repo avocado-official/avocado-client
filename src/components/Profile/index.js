@@ -2,9 +2,13 @@ import Link from 'next/link';
 
 import styles from './profile.module.scss';
 import { IoChevronBack } from 'react-icons/io5';
-import { BsInfo } from 'react-icons/bs';
 import { BiSupport } from 'react-icons/bi';
-import { RiSettings5Line } from 'react-icons/ri';
+import {
+	RiSettings3Line,
+	RiMapPinLine,
+	RiUserSettingsLine,
+} from 'react-icons/ri';
+
 import cn from 'classnames';
 
 const ProfileComp = ({ img }) => {
@@ -16,15 +20,23 @@ const ProfileComp = ({ img }) => {
 				</div>
 				<Link href='/user-info'>
 					<div className={styles.box}>
-						<BsInfo className={styles.icon} />
+						<RiUserSettingsLine className={styles.icon} />
 						<IoChevronBack className={styles.back} />
 						<a>اطلاعات کاربری</a>
 					</div>
 				</Link>
 				<div className={cn(styles.khat, 'col-11 offset-1')} />
+				<Link href='/address'>
+					<div className={styles.box}>
+						<RiMapPinLine className={styles.icon} />
+						<a>آدرس ها</a>
+						<IoChevronBack className={styles.back} />
+					</div>
+				</Link>{' '}
+				<div className={cn(styles.khat, 'col-11 offset-1')} />
 				<Link href='/setting'>
 					<div className={styles.box}>
-						<RiSettings5Line className={styles.icon} />
+						<RiSettings3Line className={styles.icon} />
 						<a>تنظیمات</a>
 						<IoChevronBack className={styles.back} />
 					</div>
