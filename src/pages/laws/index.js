@@ -1,5 +1,11 @@
+import Layout from '../../components/layout';
+
 function Laws() {
-  return <div>قوانین</div>
+	return (
+		<div>
+			<Layout headerTitle='قوانین' />
+		</div>
+	);
 }
 
-export default Laws
+export default Laws;

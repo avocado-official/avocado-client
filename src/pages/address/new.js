@@ -1,13 +1,13 @@
 import cn from 'classnames';
+import { useForm } from 'react-hook-form';
+import React, { useRef, useEffect, useState } from 'react';
+
 import mapboxgl from 'mapbox-gl';
 import MapboxLanguage from '@mapbox/mapbox-gl-language';
-import { useForm } from 'react-hook-form';
-
-import React, { useRef, useEffect, useState } from 'react';
 
 import Error from '../../components/Error';
 import Input from '../../components/Input';
-import Back from '../../components/BackPage';
+import Header from '../../components/header';
 
 import styles from './newAddress.module.scss';
 
@@ -31,7 +31,7 @@ const NewAddress = () => {
 		if (lat === 0 && lng === 0) {
 			setError('province', { type: `map` });
 		} else {
-			console.log('ok vali');
+			console.log('ok');
 		}
 	};
 	useEffect(() => {
@@ -71,13 +71,10 @@ const NewAddress = () => {
 	console.log(errors);
 	return (
 		<>
+			<Header title='آدرس جدید' />
 			<div className='container'>
 				<div className='row justify-content-center'>
 					<div className='col-11 col-md-8'>
-						<div className={styles.headerBox}>
-							<p className={styles.header}>آدرس جدید</p>
-							<Back />
-						</div>
 						<form
 							onSubmit={handleSubmit(onSubmit)}
 							className={styles.form}

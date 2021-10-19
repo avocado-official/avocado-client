@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
 import AddressBox from '../../components/AddressBox';
-import Footer from '../../components/footer';
 import { SERVER_URL } from '../../config';
-import Link from 'next/link';
-
-import { BsPlus } from 'react-icons/bs';
 
 import axios from 'axios';
 
-import styles from '../../components/AddressBox/addressBox.module.scss';
+// import styles from '../../components/AddressBox/addressBox.module.scss';
+import Layout from '../../components/layout';
+
+import * as Routes from '../../staticRes/routePath';
+import { useRouter } from 'next/router';
+
 const Address = () => {
 	const [items, setItems] = useState([]);
 
@@ -35,28 +36,18 @@ const Address = () => {
 				// always executed
 			});
 	}, []);
+	const router = useRouter();
 	return (
 		<div>
+			<Layout headerTitle='آدرس ها' />
 			<div className='container'>
 				<div className='row justify-content-center'>
-					<div className='col-12 col-md-12'>
-						<div className={styles.headerBox}>
-							<p className={styles.header}>آدرس ها</p>
-							<div className={styles.newadrs}>
-								<Link href='/address/new'>
-									<a className={styles.linkadrs}>
-										افزودن آدرس <BsPlus />
-									</a>
-								</Link>
-							</div>
-						</div>
-					</div>
+					<div className='col-12 col-md-12'></div>
 				</div>
 			</div>
 			{items.map((item) => (
 				<AddressBox item={item} />
 			))}
-			<Footer />
 		</div>
 	);
 };

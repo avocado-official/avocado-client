@@ -1,18 +1,18 @@
 import { useRouter } from 'next/router';
 
-import { AiOutlineMenu } from 'react-icons/ai';
 import { VscBell } from 'react-icons/vsc';
-
-import styles from './header.module.scss';
 
 import NavLink from './Link';
 import * as Routes from '../../staticRes/routePath';
 
+import Back from '../BackPage';
 import Search from '../SearchBox';
+import NewAdrs from '../NewAdrs';
+
+import styles from './header.module.scss';
 
 function Header({ title }) {
 	const router = useRouter();
-
 	return (
 		<>
 			<div className={styles.header}>
@@ -20,10 +20,12 @@ function Header({ title }) {
 				<div className={styles.headerInfoDiv}>
 					<div className={styles.infoItem}>
 						<Search />
+						<NewAdrs />
 					</div>
 					<NavLink href={Routes.notification} router={router}>
 						<VscBell />
-					</NavLink>{' '}
+					</NavLink>
+					<Back />
 				</div>
 			</div>
 		</>

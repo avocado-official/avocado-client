@@ -24,33 +24,3 @@
 		box-shadow: 0px 0px 10px 1px rgb(223, 223, 223);
 	}
 }
-
-// address component
-.ul {
-	list-style-type: none;
-}
-.listbox {
-	padding-top: 10px;
-	margin-top: 6px;
-	display: flex;
-	align-items: center;
-	background: white;
-	border-radius: 4px;
-	font-size: 16px;
-	color: #999;
-	-webkit-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
-	-moz-box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
-	box-shadow: 0px 0px 40px 10px rgba(232, 232, 232, 0.7);
-}
-.links {
-	padding-bottom: 15px;
-}
-.edit {
-	font-size: 16px;
-	padding-left: 4px;
-	color: colors.$color-3;
-}
-.delete {
-	font-size: 16px;
-	color: rgb(189, 33, 33);
-}

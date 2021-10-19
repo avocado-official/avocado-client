@@ -16,7 +16,8 @@ export default function Code() {
 
 	const router = useRouter();
 	const onSubmit = () => {
-		router.push('/forget/set');
+		alert('حساب شما با موفقیت حذف شد.');
+		router.push('/');
 	};
 
 	return (

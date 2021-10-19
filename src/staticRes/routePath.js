@@ -4,7 +4,7 @@ export const login = '/login';
 export const signup = '/signup';
 export const profile = '/profile';
 export const notification = '/notification';
-
+export const address = '/address';
 // export const setting = '/setting';
 // export const contactUs = '/contact-us';
 // export const address = '/addresses';
